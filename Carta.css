@@ -1,0 +1,87 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #EEEEEE;  
+}
+/* Montamos el Grid View*/
+*{
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*Clase menu horizontal*/
+ul.menu {
+    position: fixed;
+    top: 1rem;
+    z-index: 1;
+    width: 100%;
+    
+    border: 0.1rem solid white;
+    
+    background: #6f0000;
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.menu li{
+
+    margin: 0;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+ul.menu li a {
+
+    font-size: 1rem;
+    line-height: 5rem;
+    color: blanchedalmond;
+    display: block;
+    padding: .3rem;
+    text-decoration: none;
+    border-left: 0.2rem solid seashell;
+}
+.menu li :hover{
+    background-color: purple;
+    color: goldenrod;
+    letter-spacing: 0.5rem;
+}
+#muñeira{
+
+    border-left: none;
+}
+
+/*Carta*/
+.carta{
+
+    text-align: center;
+}
+.carta img{
+
+   width: 100vw;
+}

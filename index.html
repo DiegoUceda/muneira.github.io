@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Restaurante Taperia A Muñeira"
+        <meta name="keywords" content="Restaurante, Taperia, Muñeira, Restaurante Taperia A Muñeira">
+        <meta name="author" content="Diego Pablo Uceda Dos Santos">
+
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <title>Restaurante Taperia A Muñeira</title>
+    </head>
+    <body>
+        <!--Menu Horizontal-->
+        <div class="col-12">
+            <ul class="menu">
+                <li><a href="#slider" id="muñeira">A Muñeira</a></li>
+                <li><a href="carta.html" id="carta">Carta/Bodega</a></li>
+                <li><a href="reservar.html" id="reservar" name="reservar">RESERVAR</a></li>
+                <li><a href="#map" id="ubicacion">Ubicacion</a></li>
+                <li><a href="#horario" id="contacto">Contacto</a></li>    
+            </ul>
+        </div>
+
+        <!--Slider-->
+        <div class="col-12" id="slider">
+            <div class="contenedorSlider">
+                <div class="slide fade">
+                    <img src="Slider\Comida Bravas y Pulpo.jpeg" alt="Imagen de pulpo a la gallega">
+                </div>
+            
+                <div class="slide fade">
+                    <img src="Slider\Comida Empanada Gallega 2.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Asiatico.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Filloas Marisco.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Carne Cruda.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Carne Entrecot.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Mariscada.jpeg" alt="Imagen de una parrillada de carne">
+                </div>
+
+                <div class="slide fade">
+                    <img src="Slider\Comida Calamares Plancha.jpeg" alt="Imagen de una parrillada de pulpo">
+                </div>
+
+            </div> 
+        </div>
+
+        <!--Fotos del Local y Descripcion-->
+        <div class="col-12 descripcion">
+            <div class="col-5 fotoslocal">
+                <img src="Descripcion\Entrada diurna.jpeg" alt="Foto de la entrada al local">
+                <img src="Descripcion\Terraza nocturna.jpeg" alt="Foto de la terraza del local">
+                <img src="Descripcion\salon.jpg" alt="Foto del salon del local">
+                <img src="Descripcion\Salon diurno.jpeg" alt="Foto del salon del local">
+            </div>
+
+            <div class="col-7" id="descripciontexto">
+                <h4>A Muñeira</h4>
+                <p>Con mas de treinta años de historia.
+                <br>
+                <br>
+                La Muñeira aún se enorgullece de seguir siendo un restaurante gallego donde el marisco fresco y el mejor pulpo estan a la orden del día.
+                <br>
+                <br>
+                Nuestras carnes varian desde tiernos entrecots hasta los mas jugosos chuletones de vaca rubia.
+                <br>
+                <br>
+                Con postres cocinados a mano para terminar, nuestro restaurante ofrece una fascinante combinación de marisco, carne y dulces capaces de estimular hasta los mas selectos paladares.
+                <br>
+                <br>
+                No dude en ponerse en contacto con nosotros a través de nuestro teléfono para reservar una experiencia deliciosa.</p>
+            </div>
+        </div>
+
+        <!--Mapa con la ubicacion-->
+        <br/>
+        <div class="col-12" id="mapa">
+            <div id="map">
+                
+                <style>
+                    #map { 
+                      width: 100%;
+                      height: 580px;
+                      box-shadow: 5px 5px 5px #888;
+                   }
+                </style>
+                <script>
+                    //Objeto Mapa
+                    var map = L.map('map').setView([37.62301899367717, -0.9888947631581446],18);
+                    
+                    // Objeto Layer
+                    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',maxZoom: 18
+                    }).addTo(map);
+
+                    L.control.scale().addTo(map);
+                    // Marcador leaflet
+                    L.marker([37.62301899367717, -0.9888947631581446],{draggable: true}).addTo(map);
+                </script>
+                  
+            </div>
+        </div>
+
+        <!--Horario Formas de contacto Redes sociales-->
+        <br/>
+        <div class="col-12 contacto">
+            <h4>Horario</h4>
+            <span id="horario">Abierto todos los días a excepción del Lunes</span>
+            <br/><br/><br/>
+            <table class="tabla">
+                <th>Mañana</th><th>Tarde</th>
+                <tr><td>10:30 - 17:00</td><td>20:00 - 00:00</td></tr>
+            </table>
+            <h4>Telefono de contacto: 968 51 08 67</h4>
+            <a href="https://m.facebook.com/Taperia-Mu%C3%B1eira-111594107641116/?__tn__=%2Cg" target="_blank"><img src="facebook.png" alt="facebook"></a>
+        </div>
+
+        <script src="restaurante.js"></script>
+        <link rel="stylesheet"  href="Movil.css">
+        
+    </body>
+</html>
